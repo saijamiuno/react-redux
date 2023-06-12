@@ -11,7 +11,7 @@ import {
   Input,
   Card,
 } from "antd";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import { handleSubmit, removeTodo } from "../Redux/Actions/Actions";
 
@@ -19,8 +19,6 @@ export default function Todo() {
   const dispatch = useDispatch();
   const [inputValue, setInputValue] = useState("");
   // const [toDoList, setToDoList] = useState([]);
-
-  const { toDoList } = useSelector((state) => state);
 
   const handleClick = () => {
     dispatch(handleSubmit(inputValue));
@@ -30,7 +28,7 @@ export default function Todo() {
     <div>
       <Col span={24}>
         <Row>
-          <Col offset={4} span={12}>
+          <Col offset={2} span={18}>
             <Input
               style={{}}
               value={inputValue}
@@ -39,7 +37,7 @@ export default function Todo() {
               }}
             />
           </Col>
-          <Col span={2}>
+          <Col span={4}>
             <Button
               onClick={() => {
                 handleClick();
@@ -50,25 +48,6 @@ export default function Todo() {
           </Col>
         </Row>
         <br />
-        <h2>Total Data</h2>
-        <Row>
-          <Col offset={1} span={8}>
-            <Card
-              style={{ textAlign: "left", backgroundColor: "#e8eaed" }}
-              //   #cbf0f8 , #fdcfe8 , #d7aefb
-              bodyStyle={{ textAlign: "left" }}
-              title="Todo.js"
-            >
-              {toDoList.length > 0 ? (
-                toDoList.map((v) => (
-                  <li onClick={() => dispatch(removeTodo(v))}>{v}</li>
-                ))
-              ) : (
-                <h3>Empty</h3>
-              )}
-            </Card>
-          </Col>
-        </Row>
       </Col>
     </div>
   );

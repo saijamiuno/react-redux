@@ -19,7 +19,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { handleSubmit, removeTodo } from "../Redux/Actions/Actions";
 
-export default function User() {
+export default function TotalRecords() {
   const dispatch = useDispatch();
 
   const { toDoList } = useSelector((state) => state);
@@ -30,10 +30,10 @@ export default function User() {
         <Row>
           <Col offset={1} span={8}>
             <Card
-              style={{ textAlign: "left", backgroundColor: "#d7aefb" }}
+              style={{ textAlign: "left", backgroundColor: "#cbf0f8" }}
               //   #cbf0f8 , #fdcfe8 , #d7aefb
               bodyStyle={{ textAlign: "left" }}
-              title="User.js"
+              title="TotalRecords.js"
             >
               {toDoList.length > 0 ? (
                 toDoList.map((v) => (
