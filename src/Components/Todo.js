@@ -10,18 +10,20 @@ import {
   Table,
   Input,
   Card,
-  Segmented,
-  Collapse,
-  Space,
-  Checkbox,
 } from "antd";
+import { useSelector, useDispatch } from "react-redux";
+
+import { handleSubmit, removeTodo } from "../Redux/Actions/Actions";
 
 export default function Todo() {
+  const dispatch = useDispatch();
   const [inputValue, setInputValue] = useState("");
-  const [toDoList, setToDoList] = useState([]);
+  // const [toDoList, setToDoList] = useState([]);
+
+  const { toDoList } = useSelector((state) => state);
 
   const handleClick = () => {
-    setToDoList([...toDoList, inputValue]);
+    dispatch(handleSubmit(inputValue));
     setInputValue("");
   };
   return (
@@ -58,7 +60,9 @@ export default function Todo() {
               title="Todo.js"
             >
               {toDoList.length > 0 ? (
-                toDoList.map((v) => <li>{v}</li>)
+                toDoList.map((v) => (
+                  <li onClick={() => dispatch(removeTodo(v))}>{v}</li>
+                ))
               ) : (
                 <h3>Empty</h3>
               )}
