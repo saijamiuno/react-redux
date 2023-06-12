@@ -1,23 +1,8 @@
-import React, { useState } from "react";
-import {
-  Button,
-  Tag,
-  Popover,
-  Row,
-  Col,
-  // notification,
-  // Popconfirm,
-  Table,
-  Input,
-  Card,
-  Segmented,
-  Collapse,
-  Space,
-  Checkbox,
-} from "antd";
+import React from "react";
+import { Row, Col, Card } from "antd";
 import { useSelector, useDispatch } from "react-redux";
 
-import { handleSubmit, removeTodo } from "../Redux/Actions/Actions";
+import { removeTodo } from "../Redux/Actions/Actions";
 
 export default function TotalRecords() {
   const dispatch = useDispatch();
@@ -40,7 +25,7 @@ export default function TotalRecords() {
                   <li onClick={() => dispatch(removeTodo(v))}>{v}</li>
                 ))
               ) : (
-                <h3>Empty</h3>
+                <h3> Total Records Empty</h3>
               )}
             </Card>
           </Col>

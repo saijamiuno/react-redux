@@ -1,16 +1,5 @@
 import React, { useState } from "react";
-import {
-  Button,
-  Tag,
-  Popover,
-  Row,
-  Col,
-  // notification,
-  // Popconfirm,
-  Table,
-  Input,
-  Card,
-} from "antd";
+import { Button, Row, Col, Input } from "antd";
 import { useDispatch } from "react-redux";
 
 import { handleSubmit, removeTodo } from "../Redux/Actions/Actions";
