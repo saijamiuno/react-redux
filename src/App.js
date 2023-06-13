@@ -12,7 +12,7 @@ import Render3 from "./Components/Fruits/Render3";
 function App() {
   return (
     <div style={{ overflow: "hidden" }} className="App">
-      <h1>Redux WORKING</h1>
+      <h1>Redux Working</h1>
       <Col offset={4} span={12}>
         <Todo />
       </Col>
