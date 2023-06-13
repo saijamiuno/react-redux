@@ -1,7 +1,8 @@
 import { SELECTED_FRUIT } from "../Const";
 
 const intialState = {
-  fruits: [],
+  fruits: ["Apple", "Mango", "Banana", "Orange"],
+  selectedFruit: "",
 };
 
 export default function FruitsReducer(state = intialState, actions) {
@@ -10,7 +11,7 @@ export default function FruitsReducer(state = intialState, actions) {
     case SELECTED_FRUIT:
       return {
         ...state,
-        fruits: [...state.fruits, actions.payload],
+        selectedFruit: actions.payload,
       };
 
     default:

@@ -1,16 +1,18 @@
 import React from "react";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { selectedObject } from "../Redux/Actions/Actions";
 
 export default function SelectedObjects() {
-  const [fruits, setFruits] = useState(["Apple", "Mango", "Banana", "Orange"]);
-  const [selectedFruit, setselectedFruit] = useState("");
+  const dispatch = useDispatch();
+  const { fruits, selectedFruit } = useSelector((state) => state.friuts);
 
   return (
     <center>
-      {fruits.map((fruit) => (
+      {fruits?.map((fruit) => (
         <div
           style={{ background: fruit === selectedFruit ? "pink" : "white" }}
-          onClick={() => setselectedFruit(fruit)}
+          onClick={() => dispatch(selectedObject(fruit))}
         >
           <h1>{fruit}</h1>
         </div>
