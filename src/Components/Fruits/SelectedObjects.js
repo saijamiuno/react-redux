@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { selectedObject } from "../Redux/Actions/Actions";
+import { selectedObject } from "../../Redux/Actions/Actions";
 
 export default function SelectedObjects() {
   const dispatch = useDispatch();

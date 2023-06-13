@@ -4,7 +4,7 @@ import Todo from "./Components/TodoApp/Todo";
 import User from "./Components/TodoApp/User";
 import Data from "./Components/TodoApp/Data";
 import TotalRecords from "./Components/TodoApp/TotalRecords";
-import SelectedObjects from "./Components/SelectedObjects";
+import SelectedObjects from "./Components/Fruits/SelectedObjects";
 
 function App() {
   return (
