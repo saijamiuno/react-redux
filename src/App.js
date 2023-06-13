@@ -1,9 +1,9 @@
 import "./App.css";
 import { Col, Row } from "antd";
-import Todo from "./Components/Todo";
-import User from "./Components/User";
-import Data from "./Components/Data";
-import TotalRecords from "./Components/TotalRecords";
+import Todo from "./Components/TodoApp/Todo";
+import User from "./Components/TodoApp/User";
+import Data from "./Components/TodoApp/Data";
+import TotalRecords from "./Components/TodoApp/TotalRecords";
 import SelectedObjects from "./Components/SelectedObjects";
 
 function App() {

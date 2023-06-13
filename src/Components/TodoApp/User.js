@@ -2,9 +2,9 @@ import React from "react";
 import { Row, Col, Card } from "antd";
 import { useSelector, useDispatch } from "react-redux";
 
-import { removeTodo } from "../Redux/Actions/Actions";
+import { removeTodo } from "../../Redux/Actions/Actions";
 
-export default function TotalRecords() {
+export default function User() {
   const dispatch = useDispatch();
 
   const { toDoList } = useSelector((state) => state.todos);
@@ -15,17 +15,17 @@ export default function TotalRecords() {
         <Row>
           <Col offset={1} span={8}>
             <Card
-              style={{ textAlign: "left", backgroundColor: "#cbf0f8" }}
+              style={{ textAlign: "left", backgroundColor: "#d7aefb" }}
               //   #cbf0f8 , #fdcfe8 , #d7aefb
               bodyStyle={{ textAlign: "left" }}
-              title="TotalRecords.js"
+              title="User.js"
             >
               {toDoList?.length > 0 ? (
                 toDoList.map((v) => (
                   <li onClick={() => dispatch(removeTodo(v))}>{v}</li>
                 ))
               ) : (
-                <h3> Total Records Empty</h3>
+                <h3> Users Empty</h3>
               )}
             </Card>
           </Col>

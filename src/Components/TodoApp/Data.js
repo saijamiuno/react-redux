@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col, Card } from "antd";
 import { useSelector, useDispatch } from "react-redux";
 
-import { removeTodo } from "../Redux/Actions/Actions";
+import { removeTodo } from "../../Redux/Actions/Actions";
 
 export default function Data() {
   const dispatch = useDispatch();
