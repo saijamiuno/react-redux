@@ -5,17 +5,21 @@ import User from "./Components/TodoApp/User";
 import Data from "./Components/TodoApp/Data";
 import TotalRecords from "./Components/TodoApp/TotalRecords";
 import SelectedObjects from "./Components/Fruits/SelectedObjects";
+import Render1 from "./Components/Fruits/Render1";
+import Render2 from "./Components/Fruits/Render2";
+import Render3 from "./Components/Fruits/Render3";
 
 function App() {
   return (
-    <div className="App">
-      <h1>WORKING</h1>
+    <div style={{ overflow: "hidden" }} className="App">
+      <h1>Redux WORKING</h1>
       <Col offset={4} span={12}>
         <Todo />
       </Col>
+      <h2>P1</h2>
 
       <Col span={24}>
-        <Row>
+        <Row justify={"space-between"}>
           <Col span={8}>
             <User />
           </Col>
@@ -27,8 +31,28 @@ function App() {
           </Col>
         </Row>
       </Col>
+
+      <h2>P2</h2>
       <br />
-      <SelectedObjects/>
+      <SelectedObjects />
+      <br />
+
+      <Col style={{ padding: "5vw" }} span={24}>
+        <Row gutter={[16, 16]}>
+          <Col offset={1} span={7}>
+            <Render1 />
+          </Col>
+          <Col span={7}>
+            <Render2 />
+          </Col>
+          <Col span={7}>
+            <Render3 />
+          </Col>
+        </Row>
+      </Col>
+      <Col span={24}>
+        <Row gutter={[16, 16]}></Row>
+      </Col>
     </div>
   );
 }

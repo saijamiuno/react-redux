@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectedObject } from "../../Redux/Actions/Actions";
 
@@ -11,7 +10,13 @@ export default function SelectedObjects() {
     <center>
       {fruits?.map((fruit) => (
         <div
-          style={{ background: fruit === selectedFruit ? "pink" : "white" }}
+          style={{
+            color:"#4084f2",
+            maxWidth: "10vw",
+            background: fruit === selectedFruit ? "#e8eaed" : "white",
+            borderRadius: "5px",
+            cursor: "pointer",
+          }}
           onClick={() => dispatch(selectedObject(fruit))}
         >
           <h1>{fruit}</h1>
@@ -19,7 +24,6 @@ export default function SelectedObjects() {
       ))}
 
       <hr></hr>
-      <h1>Selected fruit {selectedFruit}</h1>
     </center>
   );
 }
