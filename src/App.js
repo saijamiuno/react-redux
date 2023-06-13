@@ -4,6 +4,7 @@ import Todo from "./Components/Todo";
 import User from "./Components/User";
 import Data from "./Components/Data";
 import TotalRecords from "./Components/TotalRecords";
+import SelectedObjects from "./Components/SelectedObjects";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         </Row>
       </Col>
       <br />
+      <SelectedObjects/>
     </div>
   );
 }

@@ -20,7 +20,7 @@ export default function TotalRecords() {
               bodyStyle={{ textAlign: "left" }}
               title="TotalRecords.js"
             >
-              {toDoList.length > 0 ? (
+              {toDoList?.length > 0 ? (
                 toDoList.map((v) => (
                   <li onClick={() => dispatch(removeTodo(v))}>{v}</li>
                 ))

@@ -20,7 +20,7 @@ export default function User() {
               bodyStyle={{ textAlign: "left" }}
               title="User.js"
             >
-              {toDoList.length > 0 ? (
+              {toDoList?.length > 0 ? (
                 toDoList.map((v) => (
                   <li onClick={() => dispatch(removeTodo(v))}>{v}</li>
                 ))

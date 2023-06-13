@@ -19,7 +19,7 @@ export default function Data() {
               bodyStyle={{ textAlign: "left" }}
               title="Data.js"
             >
-              {toDoList.length > 0 ? (
+              {toDoList?.length > 0 ? (
                 toDoList.map((v) => (
                   <li onClick={() => dispatch(removeTodo(v))}>{v}</li>
                 ))
