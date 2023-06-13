@@ -7,7 +7,7 @@ import { removeTodo } from "../Redux/Actions/Actions";
 export default function User() {
   const dispatch = useDispatch();
 
-  const { toDoList } = useSelector((state) => state);
+  const { toDoList } = useSelector((state) => state.todos);
 
   return (
     <div>
