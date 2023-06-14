@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, Row, Col, Input } from "antd";
 import { useDispatch } from "react-redux";
 
-import { handleSubmit, removeTodo } from "../../Redux/Actions/Actions";
+import { handleSubmit } from "../../Redux/Actions/Todoactions";
 
 export default function Todo() {
   const dispatch = useDispatch();

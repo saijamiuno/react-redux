@@ -1,7 +1,6 @@
 import React from "react";
 import { Row, Col, Card } from "antd";
 import { useSelector } from "react-redux";
-import { selectedObject } from "../../Redux/Actions/Actions";
 export default function Render3() {
   const { selectedFruit } = useSelector((state) => state.friuts);
 

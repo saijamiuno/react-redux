@@ -14,9 +14,3 @@ export function removeTodo(value) {
   };
 }
 
-export function selectedObject(value) {
-  return {
-    type: SELECTED_FRUIT,
-    payload: value,
-  };
-}
