@@ -1,10 +1,9 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { selectedObject } from "../../Redux/Actions/fruitAction";
-
+import { selectedFruitNames } from "../../Redux/Actions/PersistAction";
 export default function SelectedNames() {
   const dispatch = useDispatch();
-  const { fruits, selectedFruit } = useSelector((state) => state.friuts);
+  const { fruits, selectedFruit } = useSelector((state) => state.persistFriuts);
 
   return (
     <center>
@@ -17,7 +16,7 @@ export default function SelectedNames() {
             borderRadius: "5px",
             cursor: "pointer",
           }}
-          onClick={() => dispatch(selectedObject(fruit))}
+          onClick={() => dispatch(selectedFruitNames(fruit))}
         >
           <h1>{fruit}</h1>
         </div>

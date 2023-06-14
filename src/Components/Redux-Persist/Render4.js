@@ -3,7 +3,7 @@ import { Row, Col, Card } from "antd";
 import { useSelector } from "react-redux";
 
 export default function Render4() {
-  const { selectedFruit } = useSelector((state) => state.friuts);
+  const { selectedFruit } = useSelector((state) => state.persistFriuts);
 
   return (
     <div>
