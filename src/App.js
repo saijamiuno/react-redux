@@ -8,6 +8,10 @@ import SelectedObjects from "./Components/Fruits/SelectedObjects";
 import Render1 from "./Components/Fruits/Render1";
 import Render2 from "./Components/Fruits/Render2";
 import Render3 from "./Components/Fruits/Render3";
+import SelectedNames from "./Components/Redux-Persist/SelectedNames";
+import Render4 from "./Components/Redux-Persist/Render4";
+import Render5 from "./Components/Redux-Persist/Render5";
+import Render6 from "./Components/Redux-Persist/Render6";
 
 function App() {
   return (
@@ -47,6 +51,27 @@ function App() {
           </Col>
           <Col span={7}>
             <Render3 />
+          </Col>
+        </Row>
+      </Col>
+      <Col span={24}>
+        <Row gutter={[16, 16]}></Row>
+      </Col>
+      <h2>Redux-Persist</h2>
+      <br />
+      <SelectedNames />
+      <br />
+
+      <Col style={{ padding: "5vw" }} span={24}>
+        <Row gutter={[16, 16]}>
+          <Col offset={1} span={7}>
+            <Render4 />
+          </Col>
+          <Col span={7}>
+            <Render5 />
+          </Col>
+          <Col span={7}>
+            <Render6 />
           </Col>
         </Row>
       </Col>
