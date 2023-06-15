@@ -78,7 +78,6 @@ function App() {
       </Col>
       <Col span={24}>
       <h2>Redux-API</h2>
-      <br />
         <Row gutter={[16, 16]}>
           <HomePage/>
         </Row>
