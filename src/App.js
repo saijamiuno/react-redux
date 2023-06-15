@@ -12,6 +12,7 @@ import SelectedNames from "./Components/Redux-Persist/SelectedNames";
 import Render4 from "./Components/Redux-Persist/Render4";
 import Render5 from "./Components/Redux-Persist/Render5";
 import Render6 from "./Components/Redux-Persist/Render6";
+import HomePage from "./Components/API/HomePage";
 
 function App() {
   return (
@@ -76,7 +77,11 @@ function App() {
         </Row>
       </Col>
       <Col span={24}>
-        <Row gutter={[16, 16]}></Row>
+      <h2>Redux-API</h2>
+      <br />
+        <Row gutter={[16, 16]}>
+          <HomePage/>
+        </Row>
       </Col>
     </div>
   );
