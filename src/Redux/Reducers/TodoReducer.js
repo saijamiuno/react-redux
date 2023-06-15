@@ -5,7 +5,6 @@ const intialState = {
 };
 
 export default function TodoReducer(state = intialState, actions) {
-  console.log(actions, "actions");
   switch (actions.type) {
     case ADD_VALUE:
       return {
