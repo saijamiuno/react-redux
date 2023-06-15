@@ -1,6 +1,10 @@
 import React from "react";
+import { Button } from "antd";
 import { useDispatch, useSelector } from "react-redux";
-import { selectedFruitNames } from "../../Redux/Actions/PersistAction";
+import {
+  selectedFruitNames,
+  resetPersistStore,
+} from "../../Redux/Actions/PersistAction";
 export default function SelectedNames() {
   const dispatch = useDispatch();
   const { fruits, selectedFruit } = useSelector((state) => state.persistFriuts);
@@ -10,8 +14,8 @@ export default function SelectedNames() {
       {fruits?.map((fruit) => (
         <div
           style={{
-            color: "#4084f2",
-            maxWidth: "10vw",
+            color: "#34a853",
+            maxWidth: "15vw",
             background: fruit === selectedFruit ? "#e8eaed" : "white",
             borderRadius: "5px",
             cursor: "pointer",
@@ -21,7 +25,14 @@ export default function SelectedNames() {
           <h1>{fruit}</h1>
         </div>
       ))}
-
+      <Button
+        style={{ backgroundColor: "black", color: "white" }}
+        onClick={() => {
+          dispatch(resetPersistStore());
+        }}
+      >
+        Reset Store
+      </Button>
       <hr></hr>
     </center>
   );

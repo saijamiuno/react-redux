@@ -1,4 +1,4 @@
-import { SELECTED_FRUIT_PERSIST } from "../Const";
+import { SELECTED_FRUIT_PERSIST, RESET_PERSIST_STORE } from "../Const";
 
 const intialState = {
   fruits: ["Apricot", "Cherry", "Guava", "Grapes", "Jackfruit", "Strawberry"],
@@ -11,6 +11,11 @@ export default function PersistReducer(state = intialState, actions) {
       return {
         ...state,
         selectedFruit: actions.payload,
+      };
+    case RESET_PERSIST_STORE:
+      return {
+        ...state,
+        selectedFruit: "",
       };
 
     default:
