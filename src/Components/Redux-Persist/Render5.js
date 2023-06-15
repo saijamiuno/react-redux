@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 export default function Render5() {
   const { selectedFruit } = useSelector((state) => state.persistFriuts);
   const { data } = useSelector((state) => state.apiData);
-  console.log(data, "data");
 
   return (
     <div>

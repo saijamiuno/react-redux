@@ -4,7 +4,7 @@ import { handleCallApi } from "./../../Redux/Actions/ApiAction";
 import { Button, Col, Row, Table } from "antd";
 export default function HomePage() {
   const dispatch = useDispatch();
-  const data = useSelector((state) => state.apiData);
+  const { data } = useSelector((state) => state.apiData);
   const isLoading = useSelector((state) => state.isLoading);
   const error = useSelector((state) => state.error);
 
@@ -12,7 +12,6 @@ export default function HomePage() {
   //   dispatch(handleCallApi());
   // }, [dispatch]);
 
-  console.log(data, "data");
   return (
     <div style={{ padding: "2vw" }}>
       <Col span={24}>
@@ -34,7 +33,7 @@ export default function HomePage() {
                   dataIndex: "body",
                 },
               ]}
-              dataSource={data?.data}
+              dataSource={data}
             />
             <Col span={12}>
               <Button
