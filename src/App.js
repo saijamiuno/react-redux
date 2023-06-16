@@ -1,5 +1,6 @@
 import "./App.css";
 import { Col, Row } from "antd";
+import Typed from "react-typed";
 import Todo from "./Components/TodoApp/Todo";
 import User from "./Components/TodoApp/User";
 import Data from "./Components/TodoApp/Data";
@@ -17,6 +18,21 @@ import HomePage from "./Components/API/HomePage";
 function App() {
   return (
     <div style={{ overflow: "hidden" }} className="App">
+      <div style={{ padding: "3vw" }} className="title">
+        <Typed
+          strings={[
+            `That's my secret, Captain. I’m always Angry`,
+            "I can do this all Day.",
+            "Whatever it Takes.",
+            "I am Iron Man",
+            "What more could I lose?",
+          ]}
+          typeSpeed={150}
+          backSpeed={50}
+          loop
+        />
+      </div>
+      <br />
       <h1>Redux Working</h1>
       <Col offset={4} span={12}>
         <Todo />
@@ -77,9 +93,9 @@ function App() {
         </Row>
       </Col>
       <Col span={24}>
-      <h2>Redux-API</h2>
+        <h2>Redux-API</h2>
         <Row gutter={[16, 16]}>
-          <HomePage/>
+          <HomePage />
         </Row>
       </Col>
     </div>
