@@ -26,6 +26,7 @@ function App() {
             "Whatever it Takes.",
             "I am Iron Man",
             "What more could I lose?",
+            "I like this One !?",
           ]}
           typeSpeed={150}
           backSpeed={50}
