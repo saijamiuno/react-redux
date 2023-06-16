@@ -34,7 +34,7 @@ function App() {
       </div>
       <br />
       <h1>Redux Working</h1>
-      <Col offset={4} span={12}>
+      <Col offset={7} span={12}>
         <Todo />
       </Col>
       <h2>P1</h2>
