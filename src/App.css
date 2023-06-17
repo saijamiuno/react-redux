@@ -48,7 +48,7 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.title {
+.titleTyping {
   font-size: 25px;
   background: black;
   -webkit-background-clip: text;
@@ -57,4 +57,13 @@ body {
   font-weight: 1.5;
   color: "#292b2c";
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.titleTyping1 {
+  font-size: 35px;
+  background: black;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 1.5;
+  font-family: -apple-system-body, BlinkMa  cSystemFont, sans-serif;
 }

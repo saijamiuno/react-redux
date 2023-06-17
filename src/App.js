@@ -18,23 +18,25 @@ import HomePage from "./Components/API/HomePage";
 function App() {
   return (
     <div style={{ overflow: "hidden" }} className="App">
-      <div style={{ padding: "3vw" }} className="title">
+      <div style={{ padding: "3vw" }} className="titleTyping">
         <Typed
           strings={[
-            `That's my secret, Captain. I’m always Angry`,
+            "No time like the Present.",
+            `That's my secret, Captain. I'm always Angry`,
             "I can do this all Day.",
+            "Just have a little Faith.",
             "Whatever it Takes.",
-            "I am Iron Man",
             "What more could I lose?",
             "I like this One !?",
+            "Dance off Bro!",
+            "He's a friend from Work",
           ]}
-          typeSpeed={150}
+          typeSpeed={140}
           backSpeed={50}
           loop
         />
       </div>
-      <br />
-      <h1>Redux Working</h1>
+      <h1 className="titleTyping1">Redux Working</h1>
       <Col offset={7} span={12}>
         <Todo />
       </Col>
