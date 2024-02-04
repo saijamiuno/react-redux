@@ -6,7 +6,6 @@ const intialState = {
 };
 
 export default function FruitsReducer(state = intialState, actions) {
-  console.log(actions, "actions");
   switch (actions.type) {
     case SELECTED_FRUIT:
       return {

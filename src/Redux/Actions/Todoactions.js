@@ -1,4 +1,4 @@
-import { ADD_VALUE, REMOVE_TODO, SELECTED_FRUIT } from "../Const";
+import { ADD_VALUE, REMOVE_TODO } from "../Const";
 
 export function handleSubmit(value) {
   return {
@@ -13,4 +13,3 @@ export function removeTodo(value) {
     payload: value,
   };
 }
-

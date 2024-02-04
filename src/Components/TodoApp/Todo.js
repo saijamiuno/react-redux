@@ -16,8 +16,8 @@ export default function Todo() {
   return (
     <div>
       <Col span={24}>
-        <Row>
-          <Col offset={2} span={18}>
+        <Row style={{ justifyItems: "center" }}>
+          <Col span={18}>
             <Input
               style={{}}
               value={inputValue}
